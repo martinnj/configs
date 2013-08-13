@@ -1,0 +1,1 @@
+/home/martin/.oh-my-zsh/themes/martin.zsh-theme
