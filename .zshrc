@@ -30,6 +30,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:/home/martin/bin:/usr/local/cuda/bin
+export EDITOR=emacs
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/lib
 export JAVA_HOME=/usr/lib/jvm/java7-openjdk
 
@@ -76,5 +77,6 @@ alias rebox="dropbox stop
 # Nice latex print
 function nicetex() {pdflatex -halt-on-error -file-line-error "$@" | egrep '^.*:[0-9]+:' ; return 0;}
 
+# Initialize powerline
 . /usr/share/zsh/site-contrib/powerline.zsh
 export PYTHONPATH=/usr/lib/python3.3/site-packages
