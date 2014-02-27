@@ -22,6 +22,8 @@ xsetroot -cursor_name left_ptr  # Make cursor look pretty
 setxkbmap dk                    # Danish keymap
 xbindkeys                       # Activate media keyes etc.
 #qtraynotify                     # Mcabber notification program. Disabled until fixed for spectrwm.
+rm /tmp/mc.fifo                 # Clear up the pipefile if it's already there. pew.
+mkfifo /tmp/mc.fifo             # Create a new one.
 
 # Start WM based on SLiM input
 DEFAULTSESSION=spectrwm
