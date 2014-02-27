@@ -21,10 +21,10 @@ setxbacklight -set 40           # Set the backlight down
 xsetroot -cursor_name left_ptr  # Make cursor look pretty
 setxkbmap dk                    # Danish keymap
 xbindkeys                       # Activate media keyes etc.
-qtraynotify                     # Mcabber notification program
+#qtraynotify                     # Mcabber notification program. Disabled until fixed for spectrwm.
 
 # Start WM based on SLiM input
-DEFAULTSESSION=i3
+DEFAULTSESSION=spectrwm
 
 case "$1" in
     i3) exec i3 ;;
