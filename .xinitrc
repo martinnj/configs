@@ -16,14 +16,14 @@ fi
 # exec startxfce4
 # ...or the Window Manager of your choice
 
-xrdb -merge .Xresources         # Setup for urxvt
-setxbacklight -set 40           # Set the backlight down
-xsetroot -cursor_name left_ptr  # Make cursor look pretty
-setxkbmap dk                    # Danish keymap
-xbindkeys                       # Activate media keyes etc.
-#qtraynotify                     # Mcabber notification program. Disabled until fixed for spectrwm.
-rm /tmp/mc.fifo                 # Clear up the pipefile if it's already there. pew.
-mkfifo /tmp/mc.fifo             # Create a new one.
+xrdb -merge .Xresources            # Setup for urxvt
+setxbacklight -set 40              # Set the backlight down
+xsetroot -cursor_name left_ptr     # Make cursor look pretty
+setxkbmap dk                       # Danish keymap
+xbindkeys                          # Activate media keyes etc.
+#qtraynotify                       # Mcabber notification program. Disabled until fixed for spectrwm.
+rm /tmp/mc.notify                  # Clear up the statusfile for mcabber notification thing.
+echo -e "\rQuite" > /tmp/mc.notify # Make a new file.
 
 # Start WM based on SLiM input
 DEFAULTSESSION=spectrwm
