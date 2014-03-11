@@ -24,6 +24,7 @@ xbindkeys                          # Activate media keyes etc.
 #qtraynotify                       # Mcabber notification program. Disabled until fixed for spectrwm.
 rm /tmp/mc.notify                  # Clear up the statusfile for mcabber notification thing.
 echo -e "\rQuite" > /tmp/mc.notify # Make a new file.
+dropbox start &                    # Start dropbox and don't wait for it. Requires dropbox-sli from AUR.
 
 # Start WM based on SLiM input
 DEFAULTSESSION=spectrwm
