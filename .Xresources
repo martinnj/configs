@@ -8,6 +8,7 @@ Xft.rgba: rgb
 Xcursor.theme: Neutral_Plus
 
 !---- URxvt general settings
+URxvt*perl-lib:                       /usr/lib/urxvt/perl/
 URxvt*cursorBlink:                    true
 URxvt*font:                           xft:terminess Powerline:size=10
 URxvt*jumpScroll:                     true
@@ -17,11 +18,10 @@ URxvt*scrollTtyKeypress:              true
 URxvt*urgentOnBell:                   true
 URxvt*visualBell:                     false
 URxvt*perl-ext-common:                default,matcher
-URxvt*urlLauncher:                    /usr/bin/chromium
+URxvt*url-launcher:                    /usr/bin/chromium
 URxvt*matcher.button:                 1
-URxvt.perl-ext-common:                default!,tabbed
-URxvt.iso14755:                       False
-URxvt.tabbed.autohide:                true
+URxvt*iso14755:                       False
+URxvt*tabbed.autohide:                true
 
 !---- URxvt Solarized Dark
 URxvt*fading:                         30
