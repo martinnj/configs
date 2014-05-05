@@ -1,14 +1,14 @@
 # -*- shell-script -*-
 # Volume Controls
 "amixer set Master 5%+"
-   XF86AudioRaiseVolume
+ XF86AudioRaiseVolume
 "amixer set Master 5%-"
-   XF86AudioLowerVolume
+ XF86AudioLowerVolume
 "amixer set Master toggle"
-   XF86AudioMute
+ XF86AudioMute
 # Lock (Fn+F3)
 "i3lock --color=000000"
-#   XF86ScreenSaver
+ XF86ScreenSaver
 # I use banshee for my audio
 #"banshee --next"
 #   XF86AudioNext
