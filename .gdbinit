@@ -3,4 +3,4 @@ set disable-randomization off
 set pagination off
 set history filename ~/.gdbhistory
 set history save
-set history extension
+set history expansion
