@@ -1,3 +1,13 @@
+;; MArmalade - Emacs Package Manager
+(require 'package)
+(add-to-list 'package-archives
+             '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+;; Haskell mode is installed via Marmalade and autoloads.
+;; It is done using the package.el method from:
+;; https://github.com/haskell/haskell-mode
+
 ;; Python mode from community.
 (autoload 'python-mode "python-mode.el" "Python mode." t)
 (setq auto-mode-alist (append '(("/*.\.py$" . python-mode)) auto-mode-alist))
@@ -24,16 +34,7 @@
 ;;                (setq words-include-escape t)    ; \ loses word break status
 ;;                (setq indent-tabs-mode nil)))    ; never ever indent with tabs
 
-
-;; Use haskellmode
-;;(load-library "haskell-site-file")
-;;(add-to-list 'auto-mode-alist '("\\.hs\\'" . haskell-mode))
-;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
-;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
-;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
-
-
-;; Get a laodpath for new module things...
+;; Get a loadpath for new module things...
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
 
@@ -101,8 +102,8 @@
 
 
 ;; Emacs code browser - Activate with M-x ecb-activate
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/ecb")
-(require 'ecb) ;; Load at startup
+;;(add-to-list 'load-path "/usr/share/emacs/site-lisp/ecb")
+;;(require 'ecb) ;; Load at startup
 ;;(require 'ecb-autoloads) ;; Load on activation
 ;;(setq ecb-auto-activate 1)
 ;;(setq ecb-tip-of-the-day nil)

@@ -61,6 +61,7 @@ bindkey "\e[F" end-of-line
 # Alias'
 alias wpa="sudo wpa_supplicant -B -Dwext -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf"
 alias wpab="sudo wpa_supplicant -B -Dwext -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf"
+alias git-yolo='git commit -am "`curl -s http://whatthecommit.com/index.txt`"'
 alias zshconfig="nano ~/.zshrc"
 alias ls='ls --color=auto -F'
 alias la='ls -a'
