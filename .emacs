@@ -8,6 +8,10 @@
 ;; It is done using the package.el method from:
 ;; https://github.com/haskell/haskell-mode
 
+;; Set haskell indentation.
+(custom-set-variables
+     '(haskell-mode-hook '(turn-on-haskell-indentation)))
+
 ;; Python mode from community.
 (autoload 'python-mode "python-mode.el" "Python mode." t)
 (setq auto-mode-alist (append '(("/*.\.py$" . python-mode)) auto-mode-alist))
