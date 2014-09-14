@@ -102,6 +102,9 @@
 ;;(color-theme-gnome2)
 ;;(color-theme-solarized-dark)
 ;;(load-theme 'monokai t)
+
+;; Theme downloaded from https://github.com/oneKelvinSmith/monokai-emacs
+;; The version in Marmalade is deprecated.
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 (load-theme 'monokai)
 
