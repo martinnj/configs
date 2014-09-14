@@ -10,7 +10,15 @@
 
 ;; Set haskell indentation.
 (custom-set-variables
-     '(haskell-mode-hook '(turn-on-haskell-indentation)))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
+ '(custom-safe-themes (quote ("c7471ce3bb42defac344b3ecfca74228731b5ab20f804fd1deb8e65dddeab26a" default)))
+ '(ecb-options-version "2.40")
+ '(haskell-mode-hook (quote (turn-on-haskell-indentation)))
+ '(inhibit-startup-screen t))
 
 ;; Python mode from community.
 (autoload 'python-mode "python-mode.el" "Python mode." t)
@@ -92,8 +100,10 @@
 ;;(color-theme-classic)
 ;;(color-theme-gnome)
 ;;(color-theme-gnome2)
-(color-theme-solarized-dark)
-
+;;(color-theme-solarized-dark)
+;;(load-theme 'monokai t)
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+(load-theme 'monokai)
 
 ;; Disable the scrollbar
 (scroll-bar-mode -1)
@@ -118,14 +128,7 @@
 (load "preview-latex.el" nil t t)
 (setq TeX-PDF-mode t)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(column-number-mode t)
- '(ecb-options-version "2.40")
- '(inhibit-startup-screen t))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
