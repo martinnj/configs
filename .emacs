@@ -8,6 +8,7 @@
 ;; It is done using the package.el method from:
 ;; https://github.com/haskell/haskell-mode
 
+
 ;; Set haskell indentation.
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -23,6 +24,21 @@
 ;; Python mode from community.
 (autoload 'python-mode "python-mode.el" "Python mode." t)
 (setq auto-mode-alist (append '(("/*.\.py$" . python-mode)) auto-mode-alist))
+
+;; Prolog mode
+(autoload 'run-prolog "prolog" "Start a Prolog sub-process." t)
+(autoload 'prolog-mode "prolog" "Major mode for editing Prolog programs." t)
+(autoload 'mercury-mode "prolog" "Major mode for editing Mercury programs." t)
+(setq prolog-system 'swi)
+(setq auto-mode-alist (append '(("\\.pl$" . prolog-mode)
+                                ("\\.pr$" . prolog-mode)
+                                ("\\.m$" . mercury-mode))
+                               auto-mode-alist))
+
+;; Erlang mode from AUR
+(setq erlang-root-dir "/usr/lib/erlang")
+(setq exec-path (cons "/usr/lib/erlang/bin" exec-path))
+(require 'erlang-start)
 
 ;; C++ and make commands.
 (global-set-key "\C-xc" 'compile)

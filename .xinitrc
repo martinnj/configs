@@ -27,10 +27,10 @@ echo -e "\rQuite" > /tmp/mc.notify # Make a new file.
 dropbox start &                    # Start dropbox and don't wait for it. Requires dropbox-sli from AUR.
 
 # Start WM based on SLiM input
-DEFAULTSESSION=spectrwm
+DEFAULTSESSION=i3
 
 case "$1" in
     i3) exec i3 ;;
-    spectrwm) spectrwm ;;
+    xmonad) exec xmonad ;;
     *) exec $DEFAULTSESSION ;;
 esac
