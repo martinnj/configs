@@ -93,7 +93,7 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1: emacs
+bindsym $mod+1 workspace 1: edit
 bindsym $mod+2 workspace 2: rxvt
 bindsym $mod+3 workspace 3: Web
 bindsym $mod+4 workspace 4: IM
@@ -105,7 +105,7 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1: emacs
+bindsym $mod+Shift+1 move container to workspace 1: edit
 bindsym $mod+Shift+2 move container to workspace 2: rxvt
 bindsym $mod+Shift+3 move container to workspace 3: Web
 bindsym $mod+Shift+4 move container to workspace 4: IM
@@ -115,12 +115,6 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
-
-# assign some programs to default workspaces, needs testing.
-#assign [class="emacs"] 1: emacs
-#assign [class="^urxvt$"] 2: rxvt
-#assign [class="chromium"] 3: Web
-#assign [class="pidgin"] 4: IM
 
 # reload the configuration file
 bindsym $mod+Shift+c reload

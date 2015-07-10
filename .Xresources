@@ -10,7 +10,7 @@ Xcursor.theme: Neutral_Plus
 !---- URxvt general settings
 URxvt*perl-lib:                       /usr/lib/urxvt/perl/
 URxvt*cursorBlink:                    true
-URxvt*font:                           xft:terminess Powerline:size=10
+URxvt*font:                           xft:anonymice powerline:size=11
 URxvt*jumpScroll:                     true
 URxvt*scrollBar:                      false
 URxvt*scrollTtyOutput:                false
@@ -18,7 +18,7 @@ URxvt*scrollTtyKeypress:              true
 URxvt*urgentOnBell:                   true
 URxvt*visualBell:                     false
 URxvt*perl-ext-common:                default,matcher
-URxvt*url-launcher:                    /usr/bin/firefox
+URxvt*url-launcher:                    /usr/bin/chromium-browser
 URxvt*matcher.button:                 1
 URxvt*iso14755:                       False
 URxvt*tabbed.autohide:                true
