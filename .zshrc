@@ -77,6 +77,8 @@ alias ..='cd ..'
 alias rebox="dropbox stop
              dropbox start"
 
+alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+
 # Nice latex print
 function nicetex() {pdflatex -halt-on-error -file-line-error "$@" | egrep '^.*:[0-9]+:' ; return 0;}
 
