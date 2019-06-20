@@ -159,3 +159,8 @@ function nicetex() {pdflatex -halt-on-error -file-line-error "$@" | egrep '^.*:[
 #. /usr/share/zsh/site-contrib/powerline.zsh
 #. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 #export PYTHONPATH=/usr/lib/python3.3/site-packages
+
+# Hack to disable keyboard beep, Linux ignores UEFI settings :(
+xset -b
+xset b 0 0 0
+set bell-style none
