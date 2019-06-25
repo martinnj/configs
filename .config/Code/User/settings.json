@@ -4,5 +4,13 @@
     },
     "autoDocstring.docstringFormat": "sphinx",
     "autoDocstring.startOnNewLine": true,
-    "editor.rulers": [80,100]
+    "editor.rulers": [
+        80,
+        100
+    ],
+    "vs-kubernetes": {
+        "vs-kubernetes.helm-path": "/home/martin/.vs-kubernetes/tools/helm/linux-amd64/helm",
+        "vs-kubernetes.minikube-path": "/home/martin/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
+        "vs-kubernetes.draft-path": "/home/martin/.vs-kubernetes/tools/draft/linux-amd64/draft"
+    }
 }
