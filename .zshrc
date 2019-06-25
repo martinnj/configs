@@ -68,7 +68,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git kubectl aws pip docker docker-compose ansible battery)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -148,7 +148,8 @@ alias ..='cd ..'
 #alias rebox="dropbox stop
 #             dropbox start"
 alias repulse="pulseaudio --kill
-               pulseaudio --start"
+               sleep 2
+               pulseaudio --start -D"
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 
 
