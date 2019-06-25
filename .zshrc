@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 #export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:/home/martin/bin:/usr/local/cuda/bin
 export EDITOR=code
 export TERM="xterm-256color"
+export PATH=$PATH:/home/martin/bin
 #export TERM="rxvt-unicode-256color"
 #export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/lib
 #export JAVA_HOME=/usr/lib/jvm/java7-openjdk
@@ -164,4 +165,4 @@ function nicetex() {pdflatex -halt-on-error -file-line-error "$@" | egrep '^.*:[
 # Hack to disable keyboard beep, Linux ignores UEFI settings :(
 xset -b
 xset b 0 0 0
-set bell-style none
+set bell-style nonebash
