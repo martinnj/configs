@@ -152,6 +152,7 @@ alias repulse="pulseaudio --kill
                sleep 2
                pulseaudio --start -D"
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias please='sudo'
 
 
 # Nice latex print
