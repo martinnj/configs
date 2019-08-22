@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/martin/.oh-my-zsh"
+export ZSH="/home/martin/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -68,7 +68,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git kubectl aws pip docker docker-compose ansible battery)
+plugins=(git kubectl aws pip docker docker-compose ansible)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -80,11 +80,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='code'
+else
+  export EDITOR='nano'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -101,7 +101,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 #export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:/home/martin/bin:/usr/local/cuda/bin
-export EDITOR=code
+#export EDITOR=code
 export TERM="xterm-256color"
 export PATH=$PATH:/home/martin/bin
 #export TERM="rxvt-unicode-256color"
