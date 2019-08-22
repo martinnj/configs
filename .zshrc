@@ -154,6 +154,9 @@ alias repulse="pulseaudio --kill
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias please='sudo'
 
+# Restores filepermissions to prevent git from loosing it's cool.
+alias git-permission-reset='git diff -p -R --no-color | grep -E "^(diff|(old|new) mode)" --color=never | git apply'
+
 
 # Nice latex print
 function nicetex() {pdflatex -halt-on-error -file-line-error "$@" | egrep '^.*:[0-9]+:' ; return 0;}
