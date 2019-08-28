@@ -2,13 +2,31 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/martin/.oh-my-zsh"
+# We only use oh-my-zsh for non-root!
+if [ $(id -u) != 0 ]; then
+  export ZSH="/home/martin/.oh-my-zsh"
 
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+  # Set name of the theme to load --- if set to "random", it will
+  # load a random theme each time oh-my-zsh is loaded, in which case,
+  # to know which specific one was loaded, run: echo $RANDOM_THEME
+  # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+
+  ZSH_THEME="agnoster"
+
+  # Which plugins would you like to load?
+  # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
+  # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+  # Example format: plugins=(rails git textmate ruby lighthouse)
+  # Add wisely, as too many plugins slow down shell startup.
+  plugins=(kubectl docker docker-compose ansible)
+else
+  # Root has it's own installation for security.
+  export ZSH="/root/.oh-my-zsh"
+  # Use a simple theme and disable all plugins.
+  ZSH_THEME="gentoo"
+  plugins=()
+
+fi
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -62,13 +80,6 @@ ZSH_THEME="agnoster"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git kubectl aws pip docker docker-compose ansible)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -167,6 +178,7 @@ function nicetex() {pdflatex -halt-on-error -file-line-error "$@" | egrep '^.*:[
 #export PYTHONPATH=/usr/lib/python3.3/site-packages
 
 # Hack to disable keyboard beep, Linux ignores UEFI settings :(
+# Doesn't work for root, so let's not apply.
 xset -b
 xset b 0 0 0
 set bell-style nonebash
