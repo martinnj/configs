@@ -168,6 +168,10 @@ alias please='sudo'
 # Restores filepermissions to prevent git from loosing it's cool.
 alias git-permission-reset='git diff -p -R --no-color | grep -E "^(diff|(old|new) mode)" --color=never | git apply'
 
+# Git updating luxury
+alias gitget="git stash --all
+              git pull --rebase
+              git pop"
 
 # Nice latex print
 function nicetex() {pdflatex -halt-on-error -file-line-error "$@" | egrep '^.*:[0-9]+:' ; return 0;}
