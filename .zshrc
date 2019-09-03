@@ -171,7 +171,7 @@ alias git-permission-reset='git diff -p -R --no-color | grep -E "^(diff|(old|new
 # Git updating luxury
 alias gitget="git stash --all
               git pull --rebase
-              git pop"
+              git stash pop"
 
 # Nice latex print
 function nicetex() {pdflatex -halt-on-error -file-line-error "$@" | egrep '^.*:[0-9]+:' ; return 0;}
