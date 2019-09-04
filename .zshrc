@@ -187,5 +187,10 @@ xset -b
 xset b 0 0 0
 set bell-style nonebash
 
-POWERLEVEL9K_MODE='nerdfont-complete'
+# Set default AWS profile
+AWS_DEFAULT_PROFILE="default"
+
+POWERLEVEL9K_MODE="nerdfont-complete"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history battery time)
 source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
