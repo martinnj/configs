@@ -186,3 +186,6 @@ function nicetex() {pdflatex -halt-on-error -file-line-error "$@" | egrep '^.*:[
 xset -b
 xset b 0 0 0
 set bell-style nonebash
+
+POWERLEVEL9K_MODE='nerdfont-complete'
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
