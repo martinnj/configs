@@ -15,5 +15,6 @@
     },
     "git.autofetch": true,
     "window.zoomLevel": 0,
-    "files.eol": "\n"
+    "files.eol": "\n",
+    "explorer.confirmDelete": false
 }
