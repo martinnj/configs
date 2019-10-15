@@ -191,6 +191,6 @@ set bell-style nonebash
 AWS_DEFAULT_PROFILE="default"
 
 POWERLEVEL9K_MODE="nerdfont-complete"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history battery time)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator dropbox background_jobs history battery time)
 source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
