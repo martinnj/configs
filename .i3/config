@@ -303,6 +303,9 @@ exec --no-startup-id flameshot
 
 #exec --no-startup-id xbindkeys
 
+# Autoset screen resolution
+exec --no-startup-id autorandr --change
+
 #################### KEYBOARD SETTINGS
 
 # Pulse Audio controls
