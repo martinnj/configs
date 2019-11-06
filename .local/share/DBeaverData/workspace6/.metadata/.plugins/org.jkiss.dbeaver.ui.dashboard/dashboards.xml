@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dashboards>
+	<dashboard id="Select1" label="Select1" description="Queries stats" group="Status" showByDefault="true" viewType="timeseries" ratio="1.5" calc="delta" value="integer" interval="millisecond" fetch="columns" updatePeriod="1000" maxItems="300" maxAge="1800000">
+		<datasource id="mysql"/>
+		<query>Select &quot;1&quot;;</query>
+	</dashboard>
+</dashboards>
