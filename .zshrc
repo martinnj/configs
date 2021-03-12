@@ -18,7 +18,15 @@ if [ $(id -u) != 0 ]; then
   # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
   # Example format: plugins=(rails git textmate ruby lighthouse)
   # Add wisely, as too many plugins slow down shell startup.
-  plugins=(kubectl docker docker-compose ansible)
+  plugins=(
+    kubectl
+    docker
+    docker-compose
+    ansible
+    python
+    pipenv
+    git
+  )
 else
   # Root has it's own installation for security.
   export ZSH="/root/.oh-my-zsh"
@@ -112,9 +120,15 @@ fi
 
 # Customize to your needs...
 #export PATH=/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:/home/martin/bin:/usr/local/cuda/bin
-#export EDITOR=code
-export TERM="xterm-256color"
+
+# Path components for different hosts.
+export PATH=$PATH:/usr/locl/bin
 export PATH=$PATH:/home/martin/bin
+export PATH=$PATH:/home/martin/.local/bin
+# export PATH=$PATH:/home/ec2-user/bin
+# export PATH=$PATH:/home/ec2-user/.local/bin
+
+export TERM="xterm-256color"
 #export TERM="rxvt-unicode-256color"
 #export LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/lib
 #export JAVA_HOME=/usr/lib/jvm/java7-openjdk
