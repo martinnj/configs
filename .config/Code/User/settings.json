@@ -1,20 +1,127 @@
+// Place your settings in this file to overwrite the default settings
 {
+    /////
+    // GENERAL EDITOR SETTINGS
+    /////
+
+    // The number of spaces a tab is equal to. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
+    "editor.tabSize": 4,
+
+    // Insert spaces when pressing Tab. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
+    "editor.insertSpaces": true,
+
+    // Controls the display of line numbers. Possible values are 'on', 'off', and 'relative'. 'relative' shows the line count from the current cursor position.
+    "editor.lineNumbers": "on",
+
+    // Columns at which to show vertical rulers
+    "editor.rulers": [80, 100],
+
+    // Controls if the editor will scroll beyond the last line
+    "editor.scrollBeyondLastLine": true,
+
+    // Controls if the minimap is shown
+    "editor.minimap.enabled": true,
+
+    // Render the actual characters on a line (as opposed to color blocks)
+    "editor.minimap.renderCharacters": false,
+
+    // Something about selecting suggestions.
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+    // Set font priorities.
+    "editor.fontFamily": "'Menlo for Powerline', Consolas, 'Courier New', monospace",
+
+    // Disable telemetry.
+    // This option requires restart to take effect.
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+
+    // Git will automatically fetch from default remote.
+    "git.autofetch": true,
+
+    // Always use sensible newline character.
+    "files.eol": "\n",
+
+    // Always insert newline at the end of files.
+    "files.insertFinalNewline": true,
+
+    // We're never interested in these.
     "files.exclude": {
+        "*.egg-info": true,
         "**/*.pyc": true
     },
+
+    // Custom file associations.
+    "files.associations": {
+        "*.Jenkinsfile": "groovy",
+        "Jenkinsfile": "groovy"
+    },
+
+    // Default element size.
+    "window.zoomLevel": 0,
+
+    // Powershell as default terminal on windows.
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+
+    // Add file association for Jupyter notebooks.
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+
+    /////
+    // ANSIBLE SETTINGS
+    /////
+
+    // Use specified inventory file for ansible over ssh
+    // TODO: Copy it over when running, right now it's maintained manually.
+    "ansible.customOptions": "-i HomeSetup/ansible/inventory.yml --ask-vault-pass", // --ask-become-pass",
+    "ansible.fileCopyConfig": [
+        {
+            "server": "gulag.martinnj.dk",
+            "sourcePath": "D:\\Code\\HomeSetup\\Ansible",
+            "targetPath": "/home/martinnj/HomeSetup/ansible",
+            "copyOnSave": true // When true, files saved inside VSCode will be copied automatically to remote host.
+        }
+    ],
+
+    /////
+    // GITLENS SETTINGS
+    /////
+    "gitlens.defaultDateShortFormat": "YYYY MM DD",
+    "gitlens.defaultDateFormat": "YYYY MM DD HH:mm:ss",
+
+    /////
+    // AUTODOC SETTINGS
+    /////
     "autoDocstring.docstringFormat": "sphinx",
     "autoDocstring.startOnNewLine": true,
-    "editor.rulers": [
-        80,
-        100
-    ],
-    "vs-kubernetes": {
-        "vs-kubernetes.helm-path": "/home/martin/.vs-kubernetes/tools/helm/linux-amd64/helm",
-        "vs-kubernetes.minikube-path": "/home/martin/.vs-kubernetes/tools/minikube/linux-amd64/minikube",
-        "vs-kubernetes.draft-path": "/home/martin/.vs-kubernetes/tools/draft/linux-amd64/draft"
+
+    /////
+    // PYTHON SETTINGS
+    /////
+    "python.jediEnabled": false,
+    "python.pythonPath": "C:\\Python27\\python.exe",
+    "python.languageServer": "Pylance",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.terminal.launchArgs": [],
+
+    /////
+    // SSH REMOTE EDITOR SETTINGS
+    /////
+    "remote.SSH.remotePlatform": {
+        "aws-clerk-dev-martin": "linux",
+        "aws-clerk-api1": "linux",
+        "gulag.martinnj.dk": "linux"
     },
-    "git.autofetch": true,
-    "window.zoomLevel": 0,
-    "files.eol": "\n",
-    "explorer.confirmDelete": false
+
+    /////
+    // KUBERNETES SETTINGS
+    /////
+    "vs-kubernetes": {
+        "vs-kubernetes.minikube-path.linux": "/home/martin/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
+    },
 }
