@@ -30,8 +30,14 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
+    // Set zoom level
+    "window.zoomLevel": 0,
+
     // Set font priorities.
-    "editor.fontFamily": "'Menlo for Powerline', Consolas, 'Courier New', monospace",
+    "editor.fontFamily": "'Cascadia Code', 'Menlo for Powerline', Consolas, 'Courier New', monospace",
+    "editor.inlineHints.fontFamily": "'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    //"debug.console.fontFamily": "'Menlo for Powerline', default",
+    "terminal.integrated.fontFamily": "'Menlo for Powerline', 'Cascadia Mono PL'",
 
     // Disable telemetry.
     // This option requires restart to take effect.
@@ -59,9 +65,6 @@
         "Jenkinsfile": "groovy"
     },
 
-    // Default element size.
-    "window.zoomLevel": 0,
-
     // Powershell as default terminal on windows.
     "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
 
@@ -76,6 +79,7 @@
 
     // Use specified inventory file for ansible over ssh
     // TODO: Copy it over when running, right now it's maintained manually.
+    // TODO: Just use ansible.cfg
     "ansible.customOptions": "-i HomeSetup/ansible/inventory.yml --ask-vault-pass", // --ask-become-pass",
     "ansible.fileCopyConfig": [
         {
