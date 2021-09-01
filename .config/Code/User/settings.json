@@ -126,4 +126,5 @@
     "vs-kubernetes": {
         "vs-kubernetes.minikube-path.linux": "/home/martin/.vs-kubernetes/tools/minikube/linux-amd64/minikube"
     },
+    "redhat.telemetry.enabled": false,
 }
