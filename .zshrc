@@ -208,3 +208,8 @@ POWERLEVEL9K_MODE="nerdfont-complete"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir virtualenv vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator dropbox background_jobs history battery time)
 source /usr/share/zsh-theme-powerlevel10k/powerlevel9k.zsh-theme
+
+# Load keybindings last, this gets bongled up if they're loaded further up.
+# Emberassingly I can't figure out why.
+# But it's probably related to powerline.
+source $ZSH/lib/key-bindings.zsh
